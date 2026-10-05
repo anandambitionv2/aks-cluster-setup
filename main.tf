@@ -3,9 +3,9 @@ module "aks_clusters" {
 aks_clusters = var.aks_clusters
 }
 
-# module "helm" {
-#     source = "./modules"
-#     releases = var.releases
+module "helm" {
+    source = "./modules"
+    releases = var.releases
   
-# }
+}
 

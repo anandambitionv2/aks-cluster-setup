@@ -25,3 +25,21 @@ aks_clusters = {
   }
 }
 
+releases = {
+  "r1" = {
+    
+    name             = "argo-server-release"
+    repository       = "https://argoproj.github.io/argo-helm"
+    chart            = "argo-cd"
+    version          = "10.0.0"
+    values           = ["values/values.yml"]
+    namespace        = "argocd"
+    create_namespace = true
+ 
+  
+  }
+
+
+  
+}
+
