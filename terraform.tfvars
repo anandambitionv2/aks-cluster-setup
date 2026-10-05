@@ -8,6 +8,10 @@ aks_clusters = {
     node_provisioning_profile = {
       mode = "Manual"
     }
+    azure_active_directory_role_based_access_control = {
+      
+      azure_rbac_enabled = true
+    }
     default_node_pool   = {
       name       = "default"
       node_count = 1
