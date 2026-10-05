@@ -6,8 +6,8 @@ variable "aks_clusters" {
     resource_group_name = string
     dns_prefix          = string
     azure_active_directory_role_based_access_control = optional(object({
-      admin_group_object_ids = list(string)
-      azure_rbac_enabled = bool
+      admin_group_object_ids = optional(list(string))
+      azure_rbac_enabled =optional(bool)
     })) 
     node_provisioning_profile = object({
       mode = string
