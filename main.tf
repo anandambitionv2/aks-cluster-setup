@@ -4,7 +4,7 @@ aks_clusters = var.aks_clusters
 }
 
 module "helm" {
-    source = "./modules"
+    source = "./modules/helm-release"
     releases = var.releases
   
 }
