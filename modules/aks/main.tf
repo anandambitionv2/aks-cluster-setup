@@ -36,6 +36,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   tags = each.value.tags
+  depends_on = [ azurerm_resource_group.aks-rg ]
   
 }
 
