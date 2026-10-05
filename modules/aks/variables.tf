@@ -25,5 +25,8 @@ variable "aks_clusters" {
   identity_type       = optional(string)
     tags                = optional(map(string))
   }))   
+  default = {
+
+  }
   
 }

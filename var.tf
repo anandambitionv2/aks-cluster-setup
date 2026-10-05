@@ -27,6 +27,9 @@ variable "aks_clusters" {
     tags                = optional(map(string))
 
   }))
+  default = {
+
+  }
   
 }
 
