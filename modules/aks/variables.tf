@@ -22,8 +22,8 @@ variable "aks_clusters" {
         pod_cidr             = string
       })
     })
-    identity_type       = string
-    tags                = map(string)
+  identity_type       = optional(string)
+    tags                = optional(map(string))
   }))   
   
 }
