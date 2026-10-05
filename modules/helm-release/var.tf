@@ -1,6 +1,6 @@
 variable "releases" {
   description = "A map of Helm releases to be deployed"
-  type        = map(object({
+  type = map(object({
     name             = string
     repository       = string
     chart            = string
@@ -10,5 +10,5 @@ variable "releases" {
     create_namespace = optional(bool)
     reset_values     = optional(bool, false)
   }))
-  
+
 }
