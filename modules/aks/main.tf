@@ -1,7 +1,7 @@
-# resource "azurerm_resource_group" "aks-rg" {
-#   name     = "aks-rg"
-#   location = "centralindia"
-# }
+resource "azurerm_resource_group" "aks-rg" {
+  name     = "aks-rg"
+  location = "centralindia"
+}
 
 resource "azurerm_kubernetes_cluster" "aks" {
     for_each = var.aks_clusters
@@ -36,7 +36,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   tags = each.value.tags
-  # depends_on = [ azurerm_resource_group.aks-rg ]
+  depends_on = [ azurerm_resource_group.aks-rg ]
   
 }
 
