@@ -24,7 +24,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     name       = each.value.default_node_pool.name
     node_count = each.value.default_node_pool.node_count
     vm_size    = each.value.default_node_pool.vm_size
-    os_disk_size_gb = each.value
+    os_disk_size_gb = each.value.default_node_pool.os_disk_size_gb
     os_sku = each.value.default_node_pool.os_sku
     vnet_subnet_id = each.value.default_node_pool.vnet_subnet_id
    
