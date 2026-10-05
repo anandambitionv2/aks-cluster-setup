@@ -4,6 +4,9 @@ aks_clusters = {
     location            = "centralindia"
     resource_group_name = "aks-rg"
     dns_prefix          = "aks-argocd-cluster-tf"
+    node_provisioning_profile = {
+      mode = "Manual"
+    }
     default_node_pool   = {
       name       = "default"
       node_count = 1

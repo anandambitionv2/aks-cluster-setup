@@ -5,6 +5,9 @@ variable "aks_clusters" {
     location            = string
     resource_group_name = string
     dns_prefix          = string
+    node_provisioning_profile = object({
+      mode = string
+    })
     default_node_pool   = object({
       name       = string
       node_count = number

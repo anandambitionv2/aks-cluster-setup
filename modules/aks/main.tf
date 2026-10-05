@@ -16,6 +16,9 @@ resource "azurerm_kubernetes_cluster" "aks" {
     network_plugin_mode = each.value.default_node_pool.node_network_profile.network_plugin_mode
     pod_cidr = each.value.default_node_pool.node_network_profile.pod_cidr   
     }
+    node_provisioning_profile {
+      mode = each.value.node_provisioning_profile.mode
+    }
 
   default_node_pool {
     name       = each.value.default_node_pool.name
