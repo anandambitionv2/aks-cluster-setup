@@ -1,4 +1,4 @@
-name: Terraform
+name: Terraform workflow (Plan and Apply)
 
 on:
   workflow_dispatch:
