@@ -1,7 +1,7 @@
-resource "azurerm_resource_group" "aks-rg" {
-  name     = "aks-rg"
-  location = "centralindia"
-}
+# resource "azurerm_resource_group" "aks-rg" {
+#   name     = "aks-rg"
+#   location = "centralindia"
+# }
 
 resource "azurerm_kubernetes_cluster" "aks" {
     for_each = var.aks_clusters
