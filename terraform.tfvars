@@ -30,13 +30,22 @@ aks_clusters = {
 }
 
 releases = {
-  "r1" = {
-    name             = "argo-server-release"
-    repository       = "https://argoproj.github.io/argo-helm"
-    chart            = "argo-cd"
-    version          = "10.9.6"
-    namespace        = "argocd"
+
+   "sample" = {
+    name             = "podinfo-test-release"
+    repository       = "https://github.io"
+    chart            = "podinfo"
+    version          = "6.6.2"
+    namespace        = "sample"
     create_namespace = true
   }
+  # "r1" = {
+  #   name             = "argo-server-release"
+  #   repository       = "https://argoproj.github.io/argo-helm"
+  #   chart            = "argo-cd"
+  #   version          = "10.9.6"
+  #   namespace        = "argocd"
+  #   create_namespace = true
+  # }
 }
 # 
