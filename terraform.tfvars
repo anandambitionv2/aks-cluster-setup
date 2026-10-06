@@ -29,23 +29,23 @@ aks_clusters = {
   }
 }
 
-# releases = {
+releases = {
 
-#   #  "sample" = {
-#   #    name             = "podinfo-test-release"
-#   #   repository       = "oci://ghcr.io/stefanprodan/charts" # Points directly to GHCR OCI root
-#   #   chart            = "podinfo"                           # Maps cleanly to the image name
-#   #   version          = "6.6.2"
-#   #   namespace        = "sample"
-#   #   create_namespace = true
-#   # }
-#   # "r1" = {
-#   #   name             = "argo-server-release"
-#   #   repository       = "https://argoproj.github.io/argo-helm"
-#   #   chart            = "argo-cd"
-#   #   version          = "10.9.6"
-#   #   namespace        = "argocd"
-#   #   create_namespace = true
-#   # }
-# }
-# 
+   "sample" = {
+     name             = "podinfo-test-release"
+    repository       = "oci://ghcr.io/stefanprodan/charts" # Points directly to GHCR OCI root
+    chart            = "podinfo"                           # Maps cleanly to the image name
+    version          = "6.6.2"
+    namespace        = "sample"
+    create_namespace = true
+  }
+  # "r1" = {
+  #   name             = "argo-server-release"
+  #   repository       = "https://argoproj.github.io/argo-helm"
+  #   chart            = "argo-cd"
+  #   version          = "10.9.6"
+  #   namespace        = "argocd"
+  #   create_namespace = true
+  # }
+}
+
