@@ -43,6 +43,11 @@ jobs:
       - name: Fetch AKS Credentials
         run: |
           az aks get-credentials --resource-group aks-rg --name "aks-argocd-cluster-central"
+          
+      - name: azure/use-kubelogin@v1
+        uses: azure/use-kubelogin@v1
+        with:
+          kubelogin-version: 'v0.0.24'
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
