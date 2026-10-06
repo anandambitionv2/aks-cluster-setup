@@ -32,9 +32,9 @@ aks_clusters = {
 releases = {
 
    "sample" = {
-    name             = "podinfo-test-release"
-    repository       = "https://github.io"
-    chart            = "podinfo"
+     name             = "podinfo-test-release"
+    repository       = "oci://ghcr.io/stefanprodan/charts" # Points directly to GHCR OCI root
+    chart            = "podinfo"                           # Maps cleanly to the image name
     version          = "6.6.2"
     namespace        = "sample"
     create_namespace = true
