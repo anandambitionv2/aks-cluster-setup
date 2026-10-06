@@ -40,7 +40,9 @@ jobs:
           subscription-id: 228a46db-66c5-4a23-9ed7-677a552990bc
 
 # 
-     
+      - name: Fetch AKS Credentials
+        run: |
+          az aks get-credentials --resource-group aks-rg --name "aks-argocd-cluster-central"
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
