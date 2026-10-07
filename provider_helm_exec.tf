@@ -12,7 +12,7 @@ provider "helm" {
       args = [
         "get-token",
         "--server-id",
-        "be88c650-c841-4259-a3d5-862fe02b71a7", # Default AAD client ID for all managed AKS clusters
+        "6dae42f8-4368-4678-94ff-3960e28e3630", # Default AAD client ID for all managed AKS clusters
         "--login",
         "azurecli"
       ]
