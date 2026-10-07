@@ -46,6 +46,7 @@ releases = {
     version          = "10.9.6"
     namespace        = "argocd"
     create_namespace = true
+    values           = ["./values/argocd_values.yaml"]
   }
 }
 
