@@ -39,13 +39,13 @@ releases = {
     namespace        = "sample"
     create_namespace = true
   }
-  # "r1" = {
-  #   name             = "argo-server-release"
-  #   repository       = "https://argoproj.github.io/argo-helm"
-  #   chart            = "argo-cd"
-  #   version          = "10.9.6"
-  #   namespace        = "argocd"
-  #   create_namespace = true
-  # }
+  "argo_server" = {
+    name             = "argo-server-release"
+    repository       = "https://argoproj.github.io/argo-helm"
+    chart            = "argo-cd"
+    version          = "10.9.6"
+    namespace        = "argocd"
+    create_namespace = true
+  }
 }
 
