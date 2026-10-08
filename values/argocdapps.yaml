@@ -1,0 +1,25 @@
+#argocdapp.yml
+applications:
+  
+  app-from-helm:  #renamed as app1 later
+    
+    project: default
+    namespace: argocd
+    additionalAnnotations:
+
+    source:
+      repoURL: https://github.com/anandambitionv2/demoforargosync.git
+      targetRevision: main
+      path: .
+
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: default
+
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+
+      # syncOptions:
+      #   - CreateNamespace=true

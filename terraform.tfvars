@@ -48,5 +48,18 @@ releases = {
     create_namespace = true
     values           = ["./values/argocd_values.yaml"]
   }
+  
+  "argo-apps" = {
+    
+    name             = "argo-app-release"
+    repository       = "https://argoproj.github.io/argo-helm"
+    chart            = "argocd-apps"
+    version          = "2.0.5"
+    values           = ["./values/argocdapps.yml"]
+    namespace        = "argocd"
+    create_namespace = false
+    
+  }
+
 }
 
