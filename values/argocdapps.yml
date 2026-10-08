@@ -46,3 +46,24 @@ applications:
 
       # syncOptions:
       #   - CreateNamespace=true
+  masterapp:
+       project: default
+       namespace: argocd
+       additionalAnnotations:
+
+       source:
+        repoURL: https://github.com/anandambitionv2/argocd-apps-demo.git
+        targetRevision: main
+        path: .
+
+       destination:
+        server: https://kubernetes.default.svc
+        namespace: default
+
+       syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+
+      # syncOptions:
+      #   - CreateNamespace=true
