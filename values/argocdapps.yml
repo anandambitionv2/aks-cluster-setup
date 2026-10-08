@@ -1,7 +1,8 @@
 #argocdapp.yml
 applications:
   
-  app-from-helm:  #renamed as app1 later
+  app-from-helm:
+  
     
     project: default
     namespace: argocd
@@ -20,6 +21,28 @@ applications:
       automated:
         prune: true
         selfHeal: true
+
+      # syncOptions:
+      #   - CreateNamespace=true
+
+  secondapp:
+       project: default
+       namespace: argocd
+       additionalAnnotations:
+
+       source:
+        repoURL: https://github.com/anandambitionv2/customer2.git
+        targetRevision: main
+        path: .
+
+       destination:
+        server: https://kubernetes.default.svc
+        namespace: default
+
+       syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
 
       # syncOptions:
       #   - CreateNamespace=true
