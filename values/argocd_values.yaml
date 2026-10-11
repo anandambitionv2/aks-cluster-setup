@@ -10,15 +10,19 @@ configs:
       server: "https://aks-external-cluster-hlaekz7t.hcp.centralindia.azmk8s.io"
       labels:
         argocd.argoproj.io/secret-type: cluster
-      config:
-        execProviderConfig:
-          command: argocd-k8s-auth
-          args:
-            - azure
-          env:
-            AAD_ENVIRONMENT_NAME: AzurePublicCloud
-            AZURE_CLIENT_ID: "9c1d1152-2e81-4b8e-b0a1-1433d7a2b513"
-            AAD_LOGIN_METHOD: workloadidentity
-          apiVersion: client.authentication.k8s.io/v1beta1
-        tlsClientConfig:
-          insecure: true
+      config: |
+           {
+              "execProviderConfig": {
+                "command": "argocd-k8s-auth",
+                "env": {
+                  "AAD_ENVIRONMENT_NAME": "AzurePublicCloud",
+                  "AZURE_CLIENT_ID": "9c1d1152-2e81-4b8e-b0a1-1433d7a2b513",
+                  "AAD_LOGIN_METHOD": "workloadidentity"
+                },
+                "args": ["azure"],
+                "apiVersion": "client.authentication.k8s.io/v1beta1"
+              },
+              "tlsClientConfig": {
+                "insecure": true
+              }
+            }
