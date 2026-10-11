@@ -5,6 +5,7 @@ aks_clusters = {
     resource_group_name = "aks-rg"
     dns_prefix          = "aks-argocd-cluster-central"
     identity_type       = "SystemAssigned"
+    workload_identity_enabled = true
     node_provisioning_profile = {
       mode = "Manual"
     }

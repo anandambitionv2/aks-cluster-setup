@@ -9,6 +9,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   location            = each.value.location
   resource_group_name = each.value.resource_group_name
   dns_prefix          = each.value.dns_prefix
+  workload_identity_enabled = each.value.workload_identity_enabled
   network_profile {
 
     network_plugin      = each.value.default_node_pool.node_network_profile.network_plugin
