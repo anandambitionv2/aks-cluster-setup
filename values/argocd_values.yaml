@@ -3,6 +3,10 @@ server:
   service:
     type: LoadBalancer
 
+controller:
+  serviceAccount:
+    annotations:
+      azure.workload.identity/client-id: "9c1d1152-2e81-4b8e-b0a1-1433d7a2b513"
 
 configs:
   clusterCredentials:
